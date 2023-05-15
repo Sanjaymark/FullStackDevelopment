@@ -1,43 +1,94 @@
-let value = 0
+let task = document.createElement('h1')
+task.setAttribute('id','task')
+document.body.appendChild(task)
 
-let h1 = document.createElement('h1')
-h1.innerHTML = 'Counter'
-h1.style.textAlign = 'center'
-document.body.appendChild(h1)
+let SW = document.createElement('h2')
+SW.innerHTML = 'Stopwatch'
+SW.style.textAlign = 'center'
+document.getElementById('root').appendChild(SW)
 
-let div = document.createElement('div')
-div.setAttribute('id','wrapper')
-document.body.appendChild(div)
+let H = 0;
+let M = 0;
+let S = 0;
+let MS= 0;
 
-let button1 = document.createElement('button')
-button1.innerHTML = '-'
-button1.addEventListener('click',decrement)
-document.getElementById('wrapper').appendChild(button1)
+let Interval;
 
-let p = document.createElement('p')
-p.innerHTML = value
-p.setAttribute('id','value')
-document.getElementById('wrapper').appendChild(p)
+let Watch = document.createElement('h2')
+Watch.innerHTML = `${H}<sub>Hr</sub> : ${M}<sub>mins</sub> : ${S}<sub>secs</sub> : ${MS}<sub>ms</sub>`
+Watch.style.textAlign = 'center'
+Watch.setAttribute('id','stopwatch')
+document.getElementById('root').appendChild(Watch)
 
-let button2 = document.createElement('button')
-button2.innerHTML = '+'
-button2.addEventListener('click',increment)
-document.getElementById('wrapper').appendChild(button2)
+let btn_wrapper = document.createElement('div')
+btn_wrapper.style.textAlign = 'center'
+document.getElementById('root').appendChild(btn_wrapper)
 
-function increment()
+
+let startbtn = document.createElement('button')
+startbtn.innerHTML = 'Start'
+
+startbtn.addEventListener('click',()=>
 {
-    document.getElementById('value').innerHTML = ++value
-}
-function decrement()
+    if (startbtn.innerHTML=="Start")
+    {
+        startbtn.innerHTML = "Stop"
+        start()
+    }
+    else
+    {
+        startbtn.innerHTML="Start"
+        stop()
+    }
+})
+btn_wrapper.appendChild(startbtn)
+
+function start()
 {
-    document.getElementById('value').innerHTML = --value
+    Interval = setInterval(()=>
+    {
+        ++MS
+        if(MS==100)
+        {
+            ++S;
+            MS=0;
+        }
+        if(S==60)
+        {
+         ++M;
+         S=0;
+        }
+        if(M==60)
+        {
+         ++H;
+         M=0;
+        }
+
+        Watch.innerHTML = `${H}<sub>Hr</sub> : ${M}<sub>mins</sub> : ${S}<sub>secs</sub> : ${MS}<sub>ms</sub>`
+    },10)
 }
 
-let input = document.createElement('input')
-input.setAttribute('type','text')
-input.setAttribute('placeholder','Enter Name')
-input.addEventListener('change',(e)=>{
-    console.log(e.target.value)
+
+function stop()
+{
+    clearInterval(Interval)
+}
+
+let resetbtn = document.createElement('button')
+resetbtn.innerHTML='Reset'
+resetbtn.setAttribute('id','btn')
+resetbtn.addEventListener('click',()=>{
+    stop()
+    startbtn.innerHTML="Start"
+    H=0;
+    M=0;
+    S=0;
+    MS=0;
+    Watch.innerHTML = `${H}<sub>Hr</sub> : ${M}<sub>mins</sub> : ${S}<sub>secs</sub> : ${MS}<sub>ms</sub>`
 })
 
-document.body.appendChild(input)
+btn_wrapper.appendChild(resetbtn)
+
+
+
+
