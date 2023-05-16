@@ -1,0 +1,81 @@
+.div1
+{
+    background-color: cadetblue;
+    height: 650px;
+    margin: 45px;
+}
+
+.div2
+{
+   height: 180px;
+   text-align: center;
+   padding-top: 30px;
+   
+}
+
+.div3
+{
+    background-color:crimson;
+    height: 400px;
+    margin: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: justify;
+    
+}
+
+.div4
+{
+    margin: 35px;
+    margin-left: 50px;
+}
+
+.div5
+{
+    margin-top: 25px;
+    font-size:x-large;
+    text-align:right;
+    padding: 20px;
+    
+    
+}
+
+.inputs
+{ 
+    width: 50%;
+    margin: 1px;
+    font-size:x-large;
+}
+
+@media (max-width:1000px)
+{
+    .inputs
+    { 
+        width: 45%;
+        margin: 1px;
+        font-size:x-large;
+    }
+}
+
+
+.div6
+{
+    text-align: center;
+}
+
+.buttons
+{
+    
+    width: 150px;
+    font-size: large;
+    margin: 20px;
+}
+
+.ind
+{
+    margin: 20px;
+}
+
+
+
+
