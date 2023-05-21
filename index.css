@@ -19,7 +19,7 @@
     height: 400px;
     margin: 30px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: row;
     text-align: justify;
     
 }
@@ -28,37 +28,34 @@
 {
     margin: 35px;
     margin-left: 50px;
+    display: flex;
 }
 
 .div5
 {
     margin-top: 25px;
     font-size:x-large;
-    text-align:right;
     padding: 20px;
-    
+    width: 70%;
+    height: 65%;
+    text-align:right;
+}
+
+.div6
+{
+    height: 22%;
     
 }
 
 .inputs
 { 
-    width: 50%;
+    width: 65%;
     margin: 1px;
     font-size:x-large;
+
 }
 
-@media (max-width:1000px)
-{
-    .inputs
-    { 
-        width: 45%;
-        margin: 1px;
-        font-size:x-large;
-    }
-}
-
-
-.div6
+div6
 {
     text-align: center;
 }
@@ -73,9 +70,50 @@
 
 .ind
 {
-    margin: 20px;
+    margin: 15px;
+}
+
+@media (max-width:1167px)
+{
+    .inputs
+    { 
+        width: 60%;
+        margin: 1px;
+        font-size:x-large;
+    }
+}
+
+
+@media (max-width:1092px)
+{
+    .inputs
+    { 
+        width: 55%;
+        margin: 1px;
+        font-size:x-large;
+    }
+}
+
+
+@media (max-width:1034px)
+{
+    .inputs
+    { 
+        width: 50%;
+        margin: 1px;
+        font-size:x-large;
+    }
 }
 
 
 
+@media (max-width:988px)
+{
+    .inputs
+    { 
+        width: 45%;
+        margin: 1px;
+        font-size:x-large;
+    }
+}
 
