@@ -1,4 +1,4 @@
-let url = 'https://61ee1f7ed593d20017dbac50.mockapi.io/students'
+let url = 'https://646b05097d3c1cae4ce30729.mockapi.io/Students'
 
 function createTable(data)
 {   
@@ -13,7 +13,7 @@ function createTable(data)
         <td>${e.mobile}</td>
         <td>${e.batch}</td>
         <td>
-            <button class="btn btn-primary"><a href="./View.html?id=${e.id}" class="edit"></a>Edit</button>
+            <button class="btn btn-primary"><a href="./HTML/View.html?id=${e.id}" class="edit">Edit</a></button>
             &nbsp;
             <button class="btn btn-danger" onclick="deleteData(${e.id})">Delete</button>
         </td>
@@ -21,13 +21,33 @@ function createTable(data)
         tbody.append(tr)
     });
 }
-
 async function loadData()
 {
     let res = await fetch(url);
     let data = await res.json()
     createTable(data)
 }
+
+// async function create(){
+//     let student = {
+//         firstname:"Naga",
+//         lastname:"Raj",
+//         email:"naga@gmail.com",
+//         mobile:"91091092109",
+//         batch:"20",
+//         status:true
+//     }
+//     let res = await fetch(url,
+//         {
+//             headers: {
+//                 "Content-Type": "application/json",
+//               },
+//             method:'POST',
+//             body:JSON.stringify(student)});
+//         let data = res.json()
+//         console.log(data)
+// }
+
 
 async function deleteData(e)
 {
@@ -36,6 +56,13 @@ async function deleteData(e)
         let tbody = document.getElementById('table-body')
         window.location.reload()
     }
+    // tbody.remove()
+    // tbody = document.createElement('tbody')
+    // tbody.setAttribute('id','table-body')
+    // document.getElementById('table').appendChild(tbody)
+    // loadData()
+    
 }
+
 
 loadData()
