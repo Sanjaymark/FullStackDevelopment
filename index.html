@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <form name="create">
+        <label class="elements" for="firstname">firstname</label>
+        <input type="text" id="firstname" name="firstname" class="input" placeholder="firstname"><br>
+        <label class="elements" for="lastname">lastname</label>
+        <input type="text" id="lastname" name="lastname" class="input" placeholder="lastname"><br>
+        <label class="elements" for="address">address</label>
+        <input type="text" id="address" name="address" class="input" placeholder="address"><br>
+        <label class="elements" for="pincode">pincode</label>
+        <input type="number" id="pincode" name="pincode" class="input" placeholder="pincode"><br>
+        <label class="elements" for="gender">gender</label>
+        <input type="text" id="gender" name="gender" class="input" placeholder="gender"><br>
+        <label class="elements" for="State">State</label>
+        <input type="text" id="State" name="State" class="input" placeholder="State"><br>
+        <label class="elements" for="Country">Country</label>
+        <input type="text" id="Country" name="Country" class="input" placeholder="Country"><br>
+
+        <button type="submit" class="button">Submit</button>
+       
+    </form>
+
+    <table class="table-head" >
+        <thead>
+            <tr>
+              
+              <th id="fn">FirstName</th>
+              <th id="ln">LastName</th>
+              <th id="add">Address</th>
+              <th id="pin">Pincode</th>
+              <th id="gen">Gender</th>
+              <th id="state">State</th>
+              <th id="country">Country</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            
+          </tbody>
+      </table>
+      <script src="./index.js"></script>
+</body>
+</html>
