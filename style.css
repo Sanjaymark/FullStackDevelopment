@@ -1,0 +1,15 @@
+#parent
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#child
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+   background-color:dodgerblue;
+   text-align: center;
+
+}
