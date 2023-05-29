@@ -2,9 +2,9 @@ async function fetchData()
 {
     try
     {
-        let res = await fetch('https://api.disneyapi.dev/character')
+        let res = await fetch('https://emojihub.yurace.pro/api/all/category/smileys-and-people')
         let character = await res.json();
-        return character.data;
+        return character;
     }
     catch(error)
     {
@@ -13,6 +13,7 @@ async function fetchData()
     
 };
   
+
   
 async function getValues()
 {
@@ -31,10 +32,11 @@ async function getValues()
         name.innerHTML = e.name
         child.appendChild(name)
 
-        let image = document.createElement('img')
-        image.setAttribute('id','image')
-        image.setAttribute('src',e.imageUrl)
-        child.appendChild(image)
+        let Smiley = document.createElement('h1')
+        Smiley.setAttribute('id','smiley')
+        Smiley.innerHTML = e.htmlCode
+        child.appendChild(Smiley)
+
 
         parent.appendChild(child)
     })

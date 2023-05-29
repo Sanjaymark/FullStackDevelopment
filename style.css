@@ -8,11 +8,11 @@
  #child{
     display: flex;
     flex-direction: column;
-    background-color:whitesmoke;
+    background-color:chartreuse;
     padding: 20px;
     margin: 20px;
+    font-size:x-small;
+    text-align: center;
  }
 
- #image{
-    height: 200px;
-    width: 300px;
+ 
