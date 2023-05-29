@@ -1,15 +1,18 @@
-#parent
-{
+#parent{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: coral;
 }
-
-#child
-{
+ #child{
     display: flex;
     flex-direction: column;
+    background-color:whitesmoke;
+    padding: 20px;
     margin: 20px;
-   background-color:dodgerblue;
-   text-align: center;
+ }
 
-}
+ #image{
+    height: 200px;
+    width: 300px;
