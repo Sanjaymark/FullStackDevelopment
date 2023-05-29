@@ -1,0 +1,26 @@
+#parent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+    
+}
+ .child{
+    display: flex;
+    flex-direction: column;
+    background-color:darkcyan;
+    width: 30%;
+    margin: 20px;
+ }
+
+ #image{
+    height: 300px;
+    width: 95%;
+    margin: 2%;
+    
+ }
+
+ #name,#brand,#product_link,#price,#description
+ {
+    text-align: center;
+ }
