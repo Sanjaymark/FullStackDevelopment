@@ -8,7 +8,7 @@
  .child{
     display: flex;
     flex-direction: column;
-    background-color:darkcyan;
+    background-color:lightgreen;
     width: 30%;
     margin: 20px;
  }
